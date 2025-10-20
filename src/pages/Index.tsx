@@ -4,6 +4,7 @@ import { LeagueFilter, League } from "@/components/LeagueFilter";
 import { MatchCard } from "@/components/MatchCard";
 import { MatchDetails } from "@/components/MatchDetails";
 import { RecentResults } from "@/components/RecentResults";
+import { PredictionsTable } from "@/components/PredictionsTable";
 import { mockMatches } from "@/data/mockMatches";
 import { Match } from "@/types/match";
 import { Sparkles } from "lucide-react";
@@ -57,20 +58,14 @@ const Index = () => {
           <RecentResults />
         </section>
 
-        {/* League Filter */}
+        {/* All Predictions */}
         <section className="space-y-4">
           <div className="flex items-center gap-2">
             <div className="w-1 h-8 bg-gradient-to-b from-primary to-secondary rounded-full" />
             <h2 className="text-2xl font-bold">All Predictions</h2>
           </div>
           <LeagueFilter selectedLeague={selectedLeague} onSelectLeague={setSelectedLeague} />
-        </section>
-
-        {/* Matches Grid */}
-        <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {filteredMatches.map((match) => (
-            <MatchCard key={match.id} match={match} onSelectMatch={setSelectedMatch} />
-          ))}
+          <PredictionsTable matches={filteredMatches} onSelectMatch={setSelectedMatch} />
         </section>
 
         {filteredMatches.length === 0 && (
