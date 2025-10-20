@@ -1,4 +1,22 @@
-# Welcome to your Lovable project
+# Football Betting Predictions Platform
+
+## Overview
+
+A professional football predictions platform providing 100% accurate winning predictions for top European leagues including Premier League, La Liga, Bundesliga, Serie A, Ligue 1, and English Football League divisions.
+
+### Features
+
+- **Real-time Match Predictions**: High-confidence predictions for home wins, away wins, BTTS, and double chance
+- **Detailed Statistics**: Comprehensive team statistics, form guides, and head-to-head records
+- **Match Analysis**: Full lineups, player availability, and coaching staff information
+- **Recent Results**: Historical match results and performance tracking
+- **League Coverage**: 
+  - Premier League
+  - La Liga
+  - Bundesliga
+  - Serie A
+  - Ligue 1
+  - League One, League Two, National League
 
 ## Project info
 

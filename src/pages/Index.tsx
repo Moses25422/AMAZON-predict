@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { LeagueFilter, League } from "@/components/LeagueFilter";
 import { MatchCard } from "@/components/MatchCard";
 import { MatchDetails } from "@/components/MatchDetails";
+import { RecentResults } from "@/components/RecentResults";
 import { mockMatches } from "@/data/mockMatches";
 import { Match } from "@/types/match";
 import { Sparkles } from "lucide-react";
@@ -50,6 +51,11 @@ const Index = () => {
             <MatchCard match={matchOfDay} onSelectMatch={setSelectedMatch} />
           </section>
         )}
+
+        {/* Recent Results */}
+        <section>
+          <RecentResults />
+        </section>
 
         {/* League Filter */}
         <section className="space-y-4">
