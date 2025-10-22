@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Eye } from "lucide-react";
 import { Match } from "@/types/match";
-
+import { parseYMDToLocalDate } from "@/lib/utils";
 interface PredictionsTableProps {
   matches: Match[];
   onSelectMatch: (match: Match) => void;
@@ -44,7 +44,7 @@ export const PredictionsTable = ({ matches, onSelectMatch }: PredictionsTablePro
               {matches.map((match) => (
                 <TableRow key={match.id} className="border-border/50">
                   <TableCell className="text-muted-foreground">
-                    {new Date(match.date).toLocaleDateString("en-GB", {
+                    {parseYMDToLocalDate(match.date).toLocaleDateString("en-GB", {
                       day: "2-digit",
                       month: "short",
                     })}

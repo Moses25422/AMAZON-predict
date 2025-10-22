@@ -9,7 +9,7 @@ import { mockMatches } from "@/data/mockMatches";
 import { Match } from "@/types/match";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { parseYMDToLocalDate } from "@/lib/utils";
 type DateFilter = "previous" | "today" | "next";
 
 const Index = () => {
@@ -27,9 +27,7 @@ const Index = () => {
   tomorrow.setDate(tomorrow.getDate() + 1);
 
   const filteredMatches = mockMatches.filter((match) => {
-    const matchDate = new Date(match.date);
-    matchDate.setHours(0, 0, 0, 0);
-    
+    const matchDate = parseYMDToLocalDate(match.date);
     let dateMatch = false;
     if (dateFilter === "previous") {
       dateMatch = matchDate < today;

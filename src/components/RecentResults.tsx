@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { parseYMDToLocalDate } from "@/lib/utils";
 
 interface Result {
   id: string;
@@ -125,7 +126,7 @@ export const RecentResults = () => {
               {recentResults.map((result) => (
                 <TableRow key={result.id} className="border-border/50">
                   <TableCell className="text-muted-foreground">
-                    {new Date(result.date).toLocaleDateString("en-GB", {
+                    {parseYMDToLocalDate(result.date).toLocaleDateString("en-GB", {
                       day: "2-digit",
                       month: "short",
                     })}
