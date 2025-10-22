@@ -7,7 +7,7 @@ export const mockMatches: Match[] = [
     homeTeam: "Liverpool",
     awayTeam: "Manchester United",
     time: "16:30",
-    date: new Date().toISOString().split('T')[0],
+    date: "2025-10-22",
     homeOdds: "1.72",
     drawOdds: "3.80",
     awayOdds: "5.20",
@@ -111,11 +111,7 @@ export const mockMatches: Match[] = [
     homeTeam: "Bayern Munich",
     awayTeam: "RB Leipzig",
     time: "17:30",
-    date: (() => {
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      return tomorrow.toISOString().split('T')[0];
-    })(),
+    date: "2025-10-23",
     homeOdds: "1.53",
     drawOdds: "4.20",
     awayOdds: "6.50",
@@ -212,7 +208,7 @@ export const mockMatches: Match[] = [
     homeTeam: "Barcelona",
     awayTeam: "Atletico Madrid",
     time: "21:00",
-    date: new Date().toISOString().split('T')[0],
+    date: "2025-10-22",
     homeOdds: "1.95",
     drawOdds: "3.60",
     awayOdds: "3.90",
@@ -309,11 +305,7 @@ export const mockMatches: Match[] = [
     homeTeam: "Napoli",
     awayTeam: "Juventus",
     time: "20:45",
-    date: (() => {
-      const yesterday = new Date();
-      yesterday.setDate(yesterday.getDate() - 1);
-      return yesterday.toISOString().split('T')[0];
-    })(),
+    date: "2025-10-21",
     homeOdds: "2.35",
     drawOdds: "3.30",
     awayOdds: "3.20",
@@ -410,11 +402,7 @@ export const mockMatches: Match[] = [
     homeTeam: "Paris Saint-Germain",
     awayTeam: "Lyon",
     time: "20:45",
-    date: (() => {
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      return tomorrow.toISOString().split('T')[0];
-    })(),
+    date: "2025-10-23",
     homeOdds: "1.44",
     drawOdds: "4.80",
     awayOdds: "7.20",
@@ -511,11 +499,7 @@ export const mockMatches: Match[] = [
     homeTeam: "Birmingham City",
     awayTeam: "Wrexham",
     time: "15:00",
-    date: (() => {
-      const yesterday = new Date();
-      yesterday.setDate(yesterday.getDate() - 1);
-      return yesterday.toISOString().split('T')[0];
-    })(),
+    date: "2025-10-21",
     homeOdds: "2.10",
     drawOdds: "3.40",
     awayOdds: "3.50",
